@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo, useEffect, useSyncExternalStore } from 'react';
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import WebsimSocket from 'websim-socket';
 
 // --- Configuration ---
@@ -226,6 +226,6 @@ const App = () => {
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement);
+    const root = createRoot(rootElement);
     root.render(<App />);
 }
